@@ -25,6 +25,7 @@ In summary, these six principles of autonomy, loose coupling, reuse, fault toler
 and discoverability form the foundation of microservices architecture.
 
 ## Standard project tree:
+```
 src/
  └─ main/
      ├─ java/
@@ -68,3 +69,4 @@ src/
          ├─ application.yml
          ├─ static/
          └─ templates/
+```
