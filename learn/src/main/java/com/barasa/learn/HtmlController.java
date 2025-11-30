@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HtmlController {
 
-    @GetMapping("/hello-html")
-    public String helloHtml(Model model) {
-        model.addAttribute("message", "Hello from Thymeleaf!");
-        return "hello";
-    }
+    // @GetMapping("/hello-html")
+    // public String helloHtml(Model model) {
+    // model.addAttribute("message", "Hello from Thymeleaf!");
+    // return "hello";
+    // }
 }

@@ -4,6 +4,28 @@
     <title>Hello Page</title>
 </head>
 <body>
+
+    <!-- Original heading (untouched) -->
     <h1 th:text="${message}">Default message</h1>
+
+    <!-- Form to add a user -->
+    <h2>Add User</h2>
+
+    <form th:action="@{/users}" method="post" th:object="${user}">
+        <label>Name:</label><br>
+        <input type="text" th:field="*{name}" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" th:field="*{email}" required><br><br>
+
+        <label>Active:</label><br>
+        <input type="checkbox" th:field="*{active}"><br><br>
+
+        <button type="submit">Create User</button>
+    </form>
+
+    <!-- Feedback -->
+    <p th:if="${feedback}" th:text="${feedback}"></p>
+
 </body>
 </html>
