@@ -18,7 +18,6 @@ public class User {
 
     private boolean active;
 
-    // ID getter and setter
     public Long getId() {
         return id;
     }
@@ -27,7 +26,6 @@ public class User {
         this.id = id;
     }
 
-    // Name getter and setter
     public String getName() {
         return name;
     }
@@ -36,7 +34,6 @@ public class User {
         this.name = name;
     }
 
-    // Email getter and setter
     public String getEmail() {
         return email;
     }
@@ -45,7 +42,6 @@ public class User {
         this.email = email;
     }
 
-    // Active getter and setter (boolean uses 'is' prefix)
     public boolean isActive() {
         return active;
     }

@@ -19,18 +19,17 @@ public class UserController {
 
     @GetMapping
     public String showForm(Model model) {
-        model.addAttribute("user", new User()); // <--- THIS LINE
+        model.addAttribute("user", new User());
         model.addAttribute("message", "Add a new user below:");
-        return "hellox"; // name of Thymeleaf template
+        return "addUser";
     }
 
-    // Handle form submission
     @PostMapping
     public String createUser(@ModelAttribute User user, Model model) {
         service.create(user);
-        model.addAttribute("user", new User()); // reset form
+        model.addAttribute("user", new User());
         model.addAttribute("feedback", "User " + user.getName() + " added successfully!");
         model.addAttribute("message", "Add another user:");
-        return "hello"; // reload same template
+        return "addUser";
     }
 }

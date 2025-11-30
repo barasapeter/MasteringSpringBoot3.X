@@ -5,12 +5,8 @@
 </head>
 <body>
 
-    <!-- Page heading -->
-
-    <!-- Feedback message -->
     <p th:if="${feedback}" th:text="${feedback}" style="color: green;"></p>
 
-    <!-- User creation form -->
     <form th:action="@{/users}" th:object="${user}" method="post">
         <label>Name:</label><br>
         <input type="text" th:field="*{name}" required /><br><br>
